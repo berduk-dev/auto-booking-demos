@@ -6,6 +6,7 @@
   --ink: #07121b;
   --panel: #0d1b27;
   --muted: #a8b9c7;
+  --hero-image: url('./assets/tire-workshop.webp');
   font-family: Manrope, Arial, sans-serif;
   color: #f7fbff;
   background: var(--ink);
@@ -19,7 +20,7 @@ h1, h2, p, figure { margin: 0; }
 .container { width: min(1200px, calc(100% - 48px)); margin-inline: auto; }
 
 .masthead { position: relative; isolation: isolate; overflow: hidden; min-height: 920px; padding: 22px 0 94px; }
-.masthead::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, rgba(3,9,14,.48) 0%, rgba(3,9,14,.1) 27%, rgba(3,9,14,.56) 60%, #07121b 100%), url('./assets/tire-workshop.webp') center top / cover no-repeat; }
+.masthead::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, rgba(3,9,14,.48) 0%, rgba(3,9,14,.1) 27%, rgba(3,9,14,.56) 60%, #07121b 100%), var(--hero-image) center top / cover no-repeat; }
 .masthead::after { content: ''; position: absolute; z-index: -1; width: 680px; height: 680px; left: 50%; top: 28%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(37,99,169,.18), transparent 68%); pointer-events: none; }
 .site-header { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 12px 9px 18px; border: 1px solid rgba(255,255,255,.2); border-radius: 100px; background: rgba(7,17,25,.73); box-shadow: 0 12px 45px rgba(0,0,0,.23), inset 0 1px rgba(255,255,255,.09); backdrop-filter: blur(18px); animation: rise-in .65s both; }
 .brand { display: inline-flex; align-items: center; gap: 10px; flex: none; font-size: 18px; line-height: 1; font-weight: 800; letter-spacing: -.06em; }
