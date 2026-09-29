@@ -3,15 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a1119">
+  <meta name="theme-color" content="#171d20">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Демо сайта и онлайн-записи для шиномонтажа 2022 в Грозном.">
+  <meta name="description" content="Демонстрация сайта и записи для шиномонтажа «2022» в Грозном.">
   <title>2022 — шиномонтаж в Грозном | Демо</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body class="theme-2022">
-  <div id="app"></div>
-  <script>window.shop = {name:"2022", subtitle:"Шиномонтаж и хранение шин", address:"улица Возрождения, 82", phone:"+7 938 900-32-12", tel:"+79389003212", card:"https://2gis.ru/grozny/firm/70000001066521059", photo:"https://i7.photo.2gis.com/main/branch/115/70000001066521059/common", services:["Шиномонтаж", "Хранение шин", "Ремонт порезов", "Правка дисков"], intro:"Шины под контролем. Время — тоже.", detail:"Показываем, как запись и хранение шин могут выглядеть на одной странице для мастерской «2022»."};</script>
-  <script src="../app.js" defer></script>
+<body>
+  <div class="demo-banner"><span class="demo-dot" aria-hidden="true"></span><span>Персональный пример сайта для «2022»</span><strong>Демо · заявки не отправляются</strong></div>
+  <header class="site-header container" id="top">
+    <a class="brand" href="#top" aria-label="2022 — на главную"><span class="brand-name">2022<span class="brand-stop">.</span></span><span class="brand-kind">Шиномонтаж<br>Грозный</span></a>
+    <nav aria-label="Разделы сайта"><a href="#services">Услуги</a><a href="#booking">Выбрать время</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-contact" href="tel:+79389003212">Позвонить <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <figure class="hero-photo">
+        <img src="https://i7.photo.2gis.com/main/branch/115/70000001066521059/common" alt="Вывеска и вход в шиномонтаж «2022»" width="1440" height="1920" fetchpriority="high">
+        <figcaption><span>Мастерская «2022» в Грозном</span><a href="https://2gis.ru/grozny/firm/70000001066521059" target="_blank" rel="noopener noreferrer">Фото: 2ГИС ↗</a></figcaption>
+      </figure>
+      <div class="hero-content">
+        <p class="location"><span class="location-line" aria-hidden="true"></span> Грозный, улица Возрождения, 82</p>
+        <h1 id="hero-title">Шины готовы<br>к дороге.</h1>
+        <p class="hero-description">Шиномонтаж, хранение шин, ремонт порезов и правка дисков — всё, что указано в карточке мастерской.</p>
+        <div class="hero-actions"><a class="button button-accent" href="#booking">Выбрать время <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#services">Посмотреть услуги</a></div>
+        <div class="hero-bottom"><span class="wheel-mark" aria-hidden="true">◉</span><p>Удобный путь от выбора услуги до записи.<br><small>Пока это только демонстрация.</small></p></div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services" aria-labelledby="services-title"><div class="container">
+      <div class="section-title-row"><div><p class="section-kicker">По вашему запросу</p><h2 id="services-title">Что делаем</h2></div><p>Нажмите на услугу, чтобы выбрать её в форме записи. Стоимость и доступность уточняются у мастерской.</p></div>
+      <div class="service-list">
+        <a href="#booking" data-service="Шиномонтаж"><span>01</span><strong>Шиномонтаж</strong><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a href="#booking" data-service="Хранение шин"><span>02</span><strong>Хранение шин</strong><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a href="#booking" data-service="Ремонт порезов"><span>03</span><strong>Ремонт порезов</strong><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a href="#booking" data-service="Правка дисков"><span>04</span><strong>Правка дисков</strong><span class="service-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div></section>
+
+    <section class="booking-section" id="booking" aria-labelledby="booking-title"><div class="container booking-grid">
+      <div class="booking-intro"><p class="section-kicker">Пример онлайн-записи</p><h2 id="booking-title">Выберите день.<br>Мы покажем<br>следующий шаг.</h2><p>Клиенту достаточно указать услугу и удобное время. В рабочем сайте расписание задаёт сама мастерская.</p><div class="booking-disclaimer"><span aria-hidden="true">i</span><span>Время условное. Здесь не принимаются и не сохраняются заявки.</span></div></div>
+      <form class="booking-form" id="booking-form"><div class="form-top"><span>Запись в «2022»</span><span class="form-badge">Демо</span></div>
+        <label for="service">Услуга</label><select id="service" required><option value="">Выберите услугу</option><option>Шиномонтаж</option><option>Хранение шин</option><option>Ремонт порезов</option><option>Правка дисков</option></select>
+        <div class="form-pair"><div><label for="date">Дата</label><input id="date" type="date" required></div><div><label for="car">Автомобиль <small>необязательно</small></label><input id="car" type="text" maxlength="60" placeholder="Например, Kia Rio"></div></div>
+        <div class="time-label" id="time-label">Пример свободного времени</div><div class="slots" role="group" aria-labelledby="time-label"><button type="button" class="slot" aria-pressed="false" data-time="10:00">10:00</button><button type="button" class="slot" aria-pressed="false" data-time="11:30">11:30</button><button type="button" class="slot" aria-pressed="false" data-time="13:00">13:00</button><button type="button" class="slot" aria-pressed="false" data-time="15:00">15:00</button><button type="button" class="slot" aria-pressed="false" data-time="16:30">16:30</button><button type="button" class="slot" aria-pressed="false" data-time="18:00">18:00</button></div><p class="field-error" id="time-error" role="alert" hidden>Выберите удобное время.</p>
+        <div class="form-pair"><div><label for="customer">Ваше имя</label><input id="customer" type="text" maxlength="60" autocomplete="off" placeholder="Как к вам обращаться" required></div><div><label for="phone">Телефон</label><input id="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="+7 900 000-00-00" required></div></div>
+        <button class="button button-accent form-submit" type="submit">Посмотреть подтверждение <span aria-hidden="true">↗</span></button><p class="form-foot">Данные остаются только на экране и исчезнут после закрытия страницы.</p>
+      </form>
+    </div></section>
+
+    <section class="owner-section container" aria-labelledby="owner-title"><div><p class="section-kicker">Для мастерской</p><h2 id="owner-title">Расписание<br>под контролем.</h2><p>В рабочей версии владелец сможет видеть занятые окна и менять доступное время. Попробуйте закрыть окно в демо.</p><button type="button" class="button button-dark" id="toggle-slot">Закрыть окно 15:00 <span aria-hidden="true">↗</span></button></div><div class="schedule"><div class="schedule-top"><span>Сегодня / пример</span><span class="schedule-indicator" aria-hidden="true"></span></div><div class="schedule-row"><time>10:00</time><span>Свободно</span></div><div class="schedule-row"><time>11:30</time><span>Свободно</span></div><div class="schedule-row active" id="demo-slot"><time>15:00</time><span>Свободно</span></div><div class="schedule-row"><time>18:00</time><span>Свободно</span></div><p class="schedule-foot">Изменения в демо не сохраняются</p></div></section>
+  </main>
+
+  <footer id="contacts"><div class="container footer-content"><div><span class="footer-logo">2022.</span><p>Шиномонтаж и хранение шин<br>Улица Возрождения, 82, Грозный</p></div><div class="footer-links"><a href="tel:+79389003212">+7 938 900-32-12 ↗</a><a href="https://2gis.ru/grozny/firm/70000001066521059" target="_blank" rel="noopener noreferrer">Открыть в 2ГИС ↗</a></div></div><div class="container footer-note">Неофициальный концепт. Контакты и услуги взяты из открытой карточки 2ГИС; актуальность уточняйте у мастерской.</div></footer>
+
+  <dialog id="confirmation" aria-labelledby="dialog-title"><div class="dialog-symbol" aria-hidden="true">✓</div><p class="section-kicker">Пример подтверждения</p><h2 id="dialog-title">Так увидит запись клиент</h2><p id="confirmation-text"></p><p class="dialog-warning">Заявка не отправлена. Это демонстрация интерфейса.</p><button type="button" id="close-dialog" class="button button-accent">Понятно</button></dialog>
+  <script src="./app.js" defer></script>
 </body>
 </html>

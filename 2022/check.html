@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Проверка демо 2022</title></head>
+<body>
+<p id="result">Проверка…</p>
+<iframe id="demo" src="./" width="320" height="240" title="Демо 2022" onload="check()"></iframe>
+<script>
+function check() {
+  try {
+    const doc = document.getElementById('demo').contentDocument;
+    const win = doc.defaultView;
+    if (doc.documentElement.scrollWidth > win.innerWidth) throw Error('горизонтальная прокрутка');
+    doc.querySelector('[data-service="Хранение шин"]').click();
+    if (doc.getElementById('service').value !== 'Хранение шин') throw Error('выбор услуги');
+    doc.querySelector('[data-time="15:00"]').click();
+    doc.getElementById('customer').value = 'Тест';
+    doc.getElementById('phone').value = '+7 900 000-00-00';
+    doc.getElementById('booking-form').requestSubmit();
+    if (!doc.getElementById('confirmation').open || !doc.getElementById('confirmation-text').textContent.includes('15:00')) throw Error('подтверждение');
+    doc.getElementById('confirmation').close();
+    doc.getElementById('toggle-slot').click();
+    if (!doc.getElementById('demo-slot').textContent.includes('Закрыто')) throw Error('график');
+    document.getElementById('result').textContent = 'OK: мобильная ширина, выбор услуги, запись и график';
+  } catch (error) {
+    document.getElementById('result').textContent = 'FAIL: ' + error.message;
+    throw error;
+  }
+}
+</script>
+</body>
+</html>
